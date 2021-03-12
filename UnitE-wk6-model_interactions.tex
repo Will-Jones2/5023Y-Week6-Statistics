@@ -1,0 +1,1094 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Unit E-wk6 Statistics: Interactions},
+  pdfauthor={Will Jones},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Unit E-wk6 Statistics: Interactions}
+\author{Will Jones}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+Packages you will need for today:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(modelr)}
+\FunctionTok{library}\NormalTok{(car)}
+\FunctionTok{library}\NormalTok{(qqplotr)}
+\FunctionTok{library}\NormalTok{(praise)}
+\FunctionTok{library}\NormalTok{(patchwork)}
+\FunctionTok{library}\NormalTok{(stargazer)}
+\FunctionTok{library}\NormalTok{(emmeans)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{grassland-biomass-data}{%
+\section{1. Grassland biomass data}\label{grassland-biomass-data}}
+
+This dataset comes from work published in 2009 by Hautier et
+al.~(\emph{Science}, \textbf{324}:636).
+
+The response variable is the above-ground biomass (g/m\^{}2) of
+experimental plant communities exposed to fertilizer treatments and
+applying artificial light to the plant understorey.
+
+The experiment examined the effect of using fertiliser to increase plant
+biomass. Here we can compare fertilised and unfertilised treatments.
+
+A second hypothesis is that extra plant growth after fertilisation might
+be impeded by crowding and competition for light, so a third treatment
+includes the combination of fertilizer treatment and artificial light
+shone on the understorey of the plants, to see if this counteracts the
+effect of shading.
+
+Finally the design is made ``fully factorial'' with a treatment of light
+sources included on plants with no extra fertilizer applied.
+
+Experiments with designs that feature combinations of different
+treatments are called factorial designs
+
+Experiments that have all possible combinations are ``full factorial''
+analyses.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{biomass }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"data/biomass.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+We should \textbf{always} think about sensible hypotheses plot and
+inspect our data first - and not simply rely on models without checking.
+
+\textbf{Question - Can you write a brief/sensible hypothesis for the
+effects of fertilizer and light on biomass?}
+
+It is best to break down your hypotheses into sections and give
+direction
+
+\begin{itemize}
+\item
+  The application of fertilizer \textbf{increases} the biomass of the
+  experimental plant communities
+\item
+  The application of light to the plant understorey \textbf{increases}
+  the biomass of experimental plant communities
+\end{itemize}
+
+We should also plot our data to sense-check our ideas/hypotheses
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{biomass }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{FL, }\AttributeTok{y=}\NormalTok{Biomass.m2))}\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{geom\_jitter}\NormalTok{(}\AttributeTok{width=}\FloatTok{0.1}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\StringTok{"Light \& Fertilisation treatments"}\NormalTok{, }\AttributeTok{y=}\StringTok{"Above ground biomass"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"A comparison of the effects of Light and Fertilisation }\SpecialCharTok{\textbackslash{}n}\StringTok{ on Above ground plant biomass"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{UnitE-wk6-model_interactions_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{praise}\SpecialCharTok{::}\FunctionTok{praise}\NormalTok{(}\StringTok{"$\{exclamation\}! What a $\{adjective\} graph!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "ha! What a stupendous graph!"
+\end{verbatim}
+
+Now that we have both a sensible hypothesis and an observation of an
+apparent difference between treatments, we are justified in producing a
+model with one variable (Treatment) and four levels (F-L-, F-L+, F+L-,
+F+L+) to test this effect.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model1 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Biomass.m2}\SpecialCharTok{\textasciitilde{}}\NormalTok{FL, }\AttributeTok{data=}\NormalTok{biomass)}
+\FunctionTok{summary}\NormalTok{(model1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = Biomass.m2 ~ FL, data = biomass)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -233.619  -42.842    1.356   67.961  175.381 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)   355.79      23.14  15.376  < 2e-16 ***
+## FLF-L+         30.12      32.72   0.921  0.36095    
+## FLF+L-         93.69      32.72   2.863  0.00577 ** 
+## FLF+L+        219.22      32.72   6.699 8.13e-09 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 92.56 on 60 degrees of freedom
+## Multiple R-squared:  0.4686, Adjusted R-squared:  0.442 
+## F-statistic: 17.63 on 3 and 60 DF,  p-value: 2.528e-08
+\end{verbatim}
+
+Here the intercept is F-L- (no fertiliser or light). The overall model
+summary appears to support our hypotheses. There are significant
+\emph{mean differences} between our treatments and the intercept.
+
+If we want to plot the actual estimated means from our model, then these
+will be contained in \texttt{broom::augment()} but are probably easiest
+to pull out using the \texttt{emmeans()} function from the package of
+the
+\href{https://aosmith.rbind.io/2019/03/25/getting-started-with-emmeans/\#confidence-intervals-for-comparisons}{same
+name}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{emmeans}\SpecialCharTok{::}\FunctionTok{emmeans}\NormalTok{(model1, }\AttributeTok{specs=}\StringTok{"FL"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{as\_tibble}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{FL,}
+             \AttributeTok{y=}\NormalTok{emmean))}\SpecialCharTok{+}
+  \FunctionTok{geom\_pointrange}\NormalTok{((}\FunctionTok{aes}\NormalTok{(}\AttributeTok{ymin=}\NormalTok{lower.CL,}
+                       \AttributeTok{ymax=}\NormalTok{upper.CL)))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{UnitE-wk6-model_interactions_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{praise}\SpecialCharTok{::}\FunctionTok{praise}\NormalTok{(}\StringTok{"$\{exclamation\}! This is just $\{adjective\}!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "huh! This is just incredible!"
+\end{verbatim}
+
+\hypertarget{estimated-means}{%
+\subsubsection{1.1 Estimated means}\label{estimated-means}}
+
+\textbf{Remember} this is plotting the estimated means \& adding the
+95\% confidence intervals for each mean. So this cannot be used directly
+for estimating \textbf{significant} differences or \textbf{effect
+sizes}.
+
+\hypertarget{estimated-mean-differences}{%
+\subsubsection{1.2 Estimated mean
+differences}\label{estimated-mean-differences}}
+
+Let's go back to our estimated mean differences \& note the size of each
+of the estimates
+
+\textbf{Question - What do the three estimated differences of the mean
+tell us about the effect of fertiliser and light on biomass?}
+
+If the combined effect of fertiliser and light was \emph{additive} we
+would expect the F+L+ treatment to be roughly the sum of the other two
+mean differences (30+94) = 124.
+
+BUT the value is much greater than this FLF+L+ = 219.
+
+This indicates an \emph{interaction} - where the combined effect of
+Fertiliser and Light is \textbf{greater} than we would expect from
+combining the treatments.
+
+\hypertarget{modelling-an-interaction}{%
+\section{2. Modelling an interaction}\label{modelling-an-interaction}}
+
+Our previous model does not properly isolate the effect of this
+interaction. This is because it treats these four treatment combinations
+as four entirely independent treatments.
+
+We know this is not really true, that instead these are four possible
+combinations of just \textbf{two} treatments.
+
+We need a model that that uses the \emph{combination} of the two
+treatments to reflect the design and will explicitly estimate the
+interaction.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model2 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Biomass.m2}\SpecialCharTok{\textasciitilde{}}\NormalTok{Light}\SpecialCharTok{+}\NormalTok{Fert}\SpecialCharTok{+}\NormalTok{Light}\SpecialCharTok{:}\NormalTok{Fert, }\AttributeTok{data=}\NormalTok{biomass)}
+\FunctionTok{summary}\NormalTok{(model2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = Biomass.m2 ~ Light + Fert + Light:Fert, data = biomass)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -233.619  -42.842    1.356   67.961  175.381 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)      355.79      23.14  15.376  < 2e-16 ***
+## LightL+           30.13      32.72   0.921  0.36095    
+## FertF+            93.69      32.72   2.863  0.00577 ** 
+## LightL+:FertF+    95.41      46.28   2.062  0.04359 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 92.56 on 60 degrees of freedom
+## Multiple R-squared:  0.4686, Adjusted R-squared:  0.442 
+## F-statistic: 17.63 on 3 and 60 DF,  p-value: 2.528e-08
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#\# Light:Fert specifies an interaction term}
+\DocumentationTok{\#\#\# There is a shorthand for this lm(Biomass.m2\textasciitilde{}Light*Fert) where * is a shorthand for main effects AND interactions}
+\end{Highlighting}
+\end{Shaded}
+
+When we specify a model like this, the last line of the model
+(LightL+:FertF+) estimates the effect size of the interaction.
+
+Compare this to model1:
+
+(219-124) = 95
+
+So our estimated mean fro F+L+ is 219, if the effect of light is 30 and
+fertiliser is 93 then the interaction effect is what's left over - and
+now our model successfully estimates this.
+
+So to summarize:
+
+The intercept is the mean for the unmanipulated control F-L-
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{1}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## (Intercept) 
+##    355.7938
+\end{verbatim}
+
+The estimated biomass for the Fertilised treatment (F+L-) is the
+intercept plus the coefficient value for fertilisation
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{+}\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{2}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## (Intercept) 
+##    385.9188
+\end{verbatim}
+
+The estimated biomass for the Light treatment (F-L+) is
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{+}\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{3}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## (Intercept) 
+##    449.4875
+\end{verbatim}
+
+And to get the estimated mean of our final full combination treatment,
+we take the baseline intercept and both additive main effects \emph{and}
+the interaction term
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{1}\NormalTok{]}\SpecialCharTok{+}\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{2}\NormalTok{]}\SpecialCharTok{+}\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{3}\NormalTok{]}\SpecialCharTok{+}\FunctionTok{coef}\NormalTok{(model2)[}\DecValTok{4}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## (Intercept) 
+##    575.0188
+\end{verbatim}
+
+Another way to think about the interaction term, is that if there was no
+absolutely \textbf{no interaction} between fertilizer treatments and
+light treatments then the effect size of the interaction term would be
+\textbf{zero}.
+
+So the estimate would be zero and our additive effects would be the
+whole story.
+
+\hypertarget{main-effects-in-the-presence-of-a-significant-interaction}{%
+\subsection{2.1 Main effects in the presence of a significant
+interaction}\label{main-effects-in-the-presence-of-a-significant-interaction}}
+
+If we look at the summary for this model again we can see that Light
+appears to be non-significant \emph{P} = 0.36
+
+However we know that this does not tell us the whole story - here this
+is the average effect of Light on growth across both fertilised and
+non-fertilised treatments.
+
+We know because of our significant interaction term that whether the
+light has an effect depends on the fertilisation treatment - the effect
+of adding light is stronger on fertilised plants.
+
+In other words, regardless of the test results for Light and Fert,
+`both' treatment factors are important \textbf{because} there is a
+significant interaction effect
+
+So when describing a model always work from the bottom up (interactions
+first). If you detect a significant interaction term, then you must
+\textbf{must} include all the main effects that make up that treatment
+as well.
+
+Sometimes the interaction effect may be very weak, and the main effects
+much stronger overall in which case you definitely need to report all
+main and interaction effects when writing up your results.
+
+\hypertarget{anova-tables}{%
+\section{3. ANOVA tables}\label{anova-tables}}
+
+If we wish to report our results we can use ANOVA tables. Remember a
+complex model or one with more than two levels for factors will produce
+estimates for \emph{each} two-way comparison with the intercept. If we
+want an \emph{overall} summary of an effect we can use ANOVA tables.
+
+These present simple summaries of the whole analysis - but they can get
+a little tricky to interpret once we have significant interactions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(}\FunctionTok{aov}\NormalTok{(model2))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##             Df Sum Sq Mean Sq F value   Pr(>F)    
+## Light        1  96915   96915   11.31  0.00135 ** 
+## Fert         1 319889  319889   37.34 8.02e-08 ***
+## Light:Fert   1  36409   36409    4.25  0.04359 *  
+## Residuals   60 513998    8567                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\hypertarget{f-values-for-main-effects}{%
+\subsection{3.1 F-values for main
+effects}\label{f-values-for-main-effects}}
+
+The main disadvantage of ANOVA tables run by the \texttt{summary(aov())}
+route is that they work by sequentially \emph{adding} effects.
+
+This tests the main effect of factor A, followed by the main effect of
+factor B after the main effect of A, followed by the interaction effect
+AB after the main effects.
+
+The result is that the order in which variables were specified in the
+model are important AND it is bad because it \emph{over-estimates} the
+significance of main effects \emph{when} there are interactions.
+
+This is known as Type I Sums of Squares.
+
+This is ok then for looking at the top-level interaction terms
+\textbf{only} - and we can reproduce the ANOVA for the interaction term
+easily by running an \emph{F}-test comparing our complex model (2) with
+a simpler model (3).
+
+This is a \textbf{good} way to confirm that an interaction effect is
+significant. If it is not, you can remove it from your model (use the
+simple one instead).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model3 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Biomass.m2 }\SpecialCharTok{\textasciitilde{}}\NormalTok{ Light }\SpecialCharTok{+}\NormalTok{ Fert, }\AttributeTok{data =}\NormalTok{ biomass) }\DocumentationTok{\#\# simple model {-} interaction removed}
+\FunctionTok{anova}\NormalTok{(model2,model3, }\AttributeTok{test=}\StringTok{"F"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Model 1: Biomass.m2 ~ Light + Fert + Light:Fert
+## Model 2: Biomass.m2 ~ Light + Fert
+##   Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
+## 1     60 513998                              
+## 2     61 550407 -1    -36409 4.2501 0.04359 *
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\hypertarget{type-iiiiii-sum-of-squares}{%
+\subsection{3.2 Type I,II,III sum of
+squares}\label{type-iiiiii-sum-of-squares}}
+
+But what about producing F values for the main effects, when there are
+significant interactions in the model? Enter \texttt{car::Anova} which
+can specify type II and type III Sums of Squares.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car}\SpecialCharTok{::}\FunctionTok{Anova}\NormalTok{(model2, }\AttributeTok{type=}\StringTok{"III"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Anova Table (Type III tests)
+## 
+## Response: Biomass.m2
+##              Sum Sq Df  F value    Pr(>F)    
+## (Intercept) 2025427  1 236.4322 < 2.2e-16 ***
+## Light          7260  1   0.8475  0.360950    
+## Fert          70228  1   8.1979  0.005769 ** 
+## Light:Fert    36409  1   4.2501  0.043587 *  
+## Residuals    513998 60                       
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+What you should see now is that the F-value and significance of our
+interaction term never changed - but the P-values from the main effects
+are now identical to our \texttt{summary()} table. So this is a robust
+output for summarising the F-values of each main term and interaction in
+our model.
+
+E.g. Fertiliser had a sigificant effect on biomass
+\emph{F}\textsubscript{1,60} = 8.2, \emph{P} = 0.006.
+
+\hypertarget{how-to-choose-type-iii-or-iii-sums-of-squares}{%
+\subsection{3.3 How to choose Type I,II, or III Sums of
+squares}\label{how-to-choose-type-iii-or-iii-sums-of-squares}}
+
+Type I - compare the effect of removing an interaction or main effect
+from a model - useful for justifying model simplification
+
+Type II - Most accurate for describing a model with \textbf{main effects
+only}
+
+Type III - Most accurate for describing main effects and interactions
+\textbf{when there is an interaction term in the model}.
+
+\hypertarget{read-more-about-sums-of-squares}{%
+\subsubsection{Read more about sums of
+squares}\label{read-more-about-sums-of-squares}}
+
+\href{https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/}{Here},
+\href{https://towardsdatascience.com/anovas-three-types-of-estimating-sums-of-squares-don-t-make-the-wrong-choice-91107c77a27a\#:~:text=Type\%20I\%20Sums\%20of\%20Squares\%2C\%20or\%20also\%20called\%20Sequential\%20Sums,of\%20variation\%20to\%20variable\%20A}{and
+here}
+
+\hypertarget{summary}{%
+\subsubsection{Summary}\label{summary}}
+
+The test rejects the null hypothesis of no interaction effect of light
+addition and fertilization, (though only just!). And we could report
+this as:
+
+There was a significant interactive effect of light addition and
+fertilisation (\emph{F}\textasciitilde1,60 = 4.25, \emph{P} = 0.044).
+And we could also report our main effects using Type III Sums of
+Squares.
+
+IF our interaction was non-significant we would have failed to reject
+our Null Hypothesis, and we could remove the interaction term and re-do
+the model with main effects only - and test that as a separate
+hypothesis.
+
+But as we know an alternative to ANOVA reporting is to estimate
+\emph{effect sizes} with 95\% Confidence Intervals.
+
+\hypertarget{confidence-intervals-and-estimates}{%
+\section{4. Confidence intervals and
+estimates}\label{confidence-intervals-and-estimates}}
+
+Providing estimates with CI allows a test of interaction effects, but
+also provides information on the strength of the effect (how strong is
+the interaction in terms of the effect on bio-mass production).
+
+\begin{itemize}
+\tightlist
+\item
+  Important reminder our linear models allow us to produce two
+  \emph{different but related} estimates and confidence intervals
+  (\textbf{means} and \textbf{mean differences}), understanding and
+  interpreting these correctly is important for results interpretation.
+\end{itemize}
+
+Let's dive in using \texttt{broom::tidy()} because it allows us to
+easily add confidence intervals to model estimates
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{broom}\SpecialCharTok{::}\FunctionTok{tidy}\NormalTok{(model2, }\AttributeTok{conf.int=}\NormalTok{T)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 4 x 7
+##   term           estimate std.error statistic  p.value conf.low conf.high
+##   <chr>             <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
+## 1 (Intercept)       356.       23.1    15.4   1.76e-22   310.       402. 
+## 2 LightL+            30.1      32.7     0.921 3.61e- 1   -35.3       95.6
+## 3 FertF+             93.7      32.7     2.86  5.77e- 3    28.2      159. 
+## 4 LightL+:FertF+     95.4      46.3     2.06  4.36e- 2     2.84     188.
+\end{verbatim}
+
+Remember the only estimated mean in this model is the Intercept (here
+F-L-) which could be reported as 355.79 (95\%CI: 309.51-402.1) all the
+other rows represent estimated mean \textbf{differences}. These are
+pretty straightforward to interpret, if the 95\% confidence interval
+spans zero, then we cannot report a mean difference that is different to
+zero at \emph{P} \textless{} 0.05.
+
+So let's plot these mean differences and confidence intervals
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tidy\_model }\OtherTok{\textless{}{-}}\NormalTok{ broom}\SpecialCharTok{::}\FunctionTok{tidy}\NormalTok{(model2, }\AttributeTok{conf.int=}\NormalTok{T) }
+
+\NormalTok{tidy\_model}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 4 x 7
+##   term           estimate std.error statistic  p.value conf.low conf.high
+##   <chr>             <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
+## 1 (Intercept)       356.       23.1    15.4   1.76e-22   310.       402. 
+## 2 LightL+            30.1      32.7     0.921 3.61e- 1   -35.3       95.6
+## 3 FertF+             93.7      32.7     2.86  5.77e- 3    28.2      159. 
+## 4 LightL+:FertF+     95.4      46.3     2.06  4.36e- 2     2.84     188.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tidy\_model }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{estimate, }
+             \AttributeTok{y=}\NormalTok{term))}\SpecialCharTok{+}
+  \FunctionTok{geom\_pointrange}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{xmin=}\NormalTok{conf.low, }
+                      \AttributeTok{xmax=}\NormalTok{conf.high))}\SpecialCharTok{+}
+  \FunctionTok{geom\_vline}\NormalTok{(}\AttributeTok{xintercept=}\DecValTok{0}\NormalTok{,         }\DocumentationTok{\#\#\# set intercept to zero, if an interval crosses zero it means "zero difference"}
+             \AttributeTok{linetype=}\StringTok{"dashed"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{UnitE-wk6-model_interactions_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+From this we can easily see that we do not have greater than 95\%
+confidence that the estimated mean difference between the two light
+treatments is greater than zero. (Though we should also remember that
+part of the reason for this, is that we know it has a greater effect on
+fertilised plants than unfertilised plants).
+
+From our confidence intervals we can also report that the addition of
+fertiliser increases plant biomass by \emph{a minimum} of 28.23 g/m\^{}2
+and the combined effect of light and fertilisation increases biomass by
+\emph{at least} 2.84 g/m\^{}2 \textbf{more} than would expect from the
+\emph{additive} effects of light and fertilisation. (Note I am using the
+lowest confidence interval margins here).
+
+\hypertarget{more-reading}{%
+\subsubsection{More Reading}\label{more-reading}}
+
+\href{https://onlinestatbook.com/2/estimation/difference_means.html}{Estimated
+means vs estimated difference between means}
+
+\hypertarget{emmeans}{%
+\subsection{4.1 Emmeans}\label{emmeans}}
+
+It is much more common for a researcher to be interested in the
+difference between means than in the specific values of the means
+themselves. And this is the direct output from our linear model - the
+\emph{estimated mean differences} but we can also use our model to
+produce the estimated means and confidence intervals directly for our
+different categories.
+
+This is useful for plotting how well your model describes/explains the
+dataset.
+
+The easiest way to do this is with the \texttt{emmeans} package, that
+you used earlier
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{means }\OtherTok{\textless{}{-}}\NormalTok{ emmeans}\SpecialCharTok{::}\FunctionTok{emmeans}\NormalTok{(model2, }\AttributeTok{specs=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Fert}\SpecialCharTok{:}\NormalTok{Light, }\AttributeTok{type=}\StringTok{"response"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{confint}\NormalTok{() }
+ \DocumentationTok{\#\#\# estimated means as predicted by the linear model, pipe to confint to add 95\% Confidence intervals to estimates}
+
+
+\CommentTok{\# means \textless{}{-} emmeans::emmeans(model2, specs= pairwise\textasciitilde{}Fert:Light, type="response") \%\textgreater{}\% confint()}
+\DocumentationTok{\#\# add the argument pairwise \textasciitilde{} in front of the variables to produce a second table of $contrasts. }
+\CommentTok{\# Contrasts allows you to estimate average and minimum effect size differences between all factor levels {-} this is an example of a post{-}hoc test {-} a term you should be familiar with from first year. }
+
+\NormalTok{plot1 }\OtherTok{\textless{}{-}}\NormalTok{ means}\SpecialCharTok{\%\textgreater{}\%} \DocumentationTok{\#\# emmeans does not output in a table format {-} pipe to as\_tibble() to convert it. }
+  \FunctionTok{as\_tibble}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Fert,}
+             \AttributeTok{y=}\NormalTok{emmean,}
+             \AttributeTok{group=}\NormalTok{Light))}\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{linetype=}\NormalTok{Light))}
+
+\NormalTok{plot1}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{UnitE-wk6-model_interactions_files/figure-latex/unnamed-chunk-16-1.pdf}
+
+\hypertarget{task-1}{%
+\subsection{TASK 1}\label{task-1}}
+
+Use \texttt{geom\_pointrange()} to add 95\% Confidence intervals to
+these mean estimates
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plot1}\SpecialCharTok{+}\FunctionTok{geom\_pointrange}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{ymin=}\NormalTok{lower.CL, }
+                      \AttributeTok{ymax=}\NormalTok{upper.CL,}
+\NormalTok{                      ))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{UnitE-wk6-model_interactions_files/figure-latex/unnamed-chunk-17-1.pdf}
+
+\hypertarget{write-up}{%
+\section{5. Write up}\label{write-up}}
+
+\hypertarget{task-2}{%
+\subsection{TASK 2}\label{task-2}}
+
+This might seem a little more challenging than previous write-ups but we
+should have a go at presenting these results.
+
+Here we should build on previous attempts in that I will write this up
+as a full results paragraph in the style I want you to provide for your
+summative.
+
+\begin{itemize}
+\item
+  We can report the full model in a table, if we use the stargazer
+  package it will include 95\% CI for the mean differences. (Remember
+  this is great for an instant and report worthy table when producing a
+  markdown document - but will look like nonsense if run in R as it
+  outputs HTML).
+\item
+  We can refer to useful figures
+\item
+  We should report the full model ANOVA (from broom::glance or the
+  bottom line of the summary() table)
+\item
+  Describe the differences observed, include values and CI where
+  appropriate.
+\end{itemize}
+
+\textbf{My write-up}
+
+\textbf{Combined effects of Fertiliser and Light Treatments on Biomass}
+
+I hypothesised there would be positive interaction effect on the biomass
+of experimental plant communities given a combined fertiliser and
+artifical light application. Plants given a fertiliser treatment may
+experience increased competition for light as they grow, and so the
+application of an artificial light source to the plant understorey is
+expected to have a greater impact here than on the less nutrient-rich
+treatment.
+
+To test this hypothesis I compared plant biomass levels in g/m\^{}2
+using a general linear model with factorial predictors of light and
+fertiliser treatment and an interaction term of these two predictors.
+
+I found a strong overall effect of light and fertiliser treatment on the
+biomass of plants in these experimental communities
+(\emph{F}\textsubscript{3,60} = 17.6, \emph{P} \textless0.001, Full
+model estimates \textbf{Table 1}). The addition of Fertiliser had a
+strong positive effect on biomass with an average increase in yield of
+93g/m\^{}2 (95\%CI: 28.23-159.15). The application of light to the
+understorey of the plants did not have a significant effect on plant
+growth as a main effect ( estimated increase of 30.12g/m\^{}2 (95\%CI:
+-35.33-95.58), but there was a significant positive interaction effect
+of combined light and fertiliser application that increased plant
+biomass by an extra 95.4 g/m\^{}2 (95\% CI: 2.84-187.98) above that
+predicted by the additive main effects alone (\textbf{Figure 1}).
+
+This suggests that biomass production may be limited by different
+factors in the under-storey and upper canopy of the plants. For example
+with the addition of fertiliser competition for light may be more
+intense, or more light limited.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plot1}\SpecialCharTok{+}\FunctionTok{geom\_pointrange}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{ymin=}\NormalTok{lower.CL, }
+                      \AttributeTok{ymax=}\NormalTok{upper.CL,}
+                      \AttributeTok{colour=}\NormalTok{Light))}\SpecialCharTok{+}
+  \FunctionTok{geom\_jitter}\NormalTok{(}\AttributeTok{data=}\NormalTok{biomass, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Fert, }
+                                \AttributeTok{y=}\NormalTok{Biomass.m2,}
+                                \AttributeTok{group=}\NormalTok{Light,}
+                                \AttributeTok{colour=}\NormalTok{Light),}
+              \AttributeTok{width=}\FloatTok{0.1}\NormalTok{, }
+              \AttributeTok{alpha=}\FloatTok{0.6}\NormalTok{)}\SpecialCharTok{+}
+   \FunctionTok{geom\_line}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{linetype=}\NormalTok{Light, }\AttributeTok{colour=}\NormalTok{Light))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\StringTok{"Fertiliser"}\NormalTok{,}
+       \AttributeTok{y=}\FunctionTok{expression}\NormalTok{(}\FunctionTok{paste}\NormalTok{(}\StringTok{"Estimated mean biomass "}\NormalTok{, g}\SpecialCharTok{/}\NormalTok{m}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{)))}\SpecialCharTok{+}
+  \FunctionTok{scale\_colour\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"darkorange"}\NormalTok{, }\StringTok{"purple"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{theme\_classic}\NormalTok{()}\SpecialCharTok{+}
+     \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.caption=}\FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust=}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\centering
+\includegraphics{UnitE-wk6-model_interactions_files/figure-latex/unnamed-chunk-18-1.pdf}
+\caption{Figure 1. Estimated mean biomass of experimental plant
+communities under Fertiliser and Light treatments. Fertiliser and light
+treatments combine to produce a significant positive interaction.
+Central points are estimated treatment means with 95\% Confidence
+intervals, plotted alongside raw values from the dataset}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stargazer}\SpecialCharTok{::}\FunctionTok{stargazer}\NormalTok{(model2, }
+                     \AttributeTok{type=}\StringTok{"html"}\NormalTok{, }
+                     \AttributeTok{ci.custom =} \FunctionTok{list}\NormalTok{(}\FunctionTok{confint}\NormalTok{(model2)), }\DocumentationTok{\#\#\#turns out if you put CI=T, then stargazer assumes a normal dist (1.96*S.E) so to get the most accurate CI supply them using the custom argument and confint. }
+                     \AttributeTok{title=} \StringTok{"Table 1. Summary model output for the interaction of Fertiliser and Light on Experimental Plant Community Biomass"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Table 1. Summary model output for the interaction of Fertiliser and
+Light on Experimental Plant Community Biomass
+
+Dependent variable:
+
+Biomass.m2
+
+LightL+
+
+30.125
+
+(-35.332, 95.582)
+
+FertF+
+
+93.694***
+
+(28.237, 159.151)
+
+LightL+:FertF+
+
+95.406**
+
+(2.836, 187.976)
+
+Constant
+
+355.794***
+
+(309.509, 402.079)
+
+Observations
+
+64
+
+R2
+
+0.469
+
+Adjusted R2
+
+0.442
+
+Residual Std. Error
+
+92.556 (df = 60)
+
+F Statistic
+
+17.635*** (df = 3; 60)
+
+Note:
+
+\emph{p\textless0.1; \textbf{p\textless0.05; }}p\textless0.01
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#optional}
+\DocumentationTok{\#\#\#notes.append = FALSE, notes =c("\textless{}sup\textgreater{}\&sstarf;\textless{}/sup\textgreater{}p\textless{}0.1; \textless{}sup\textgreater{}\&sstarf;\&sstarf;\textless{}/sup\textgreater{}p\textless{}0.05; \textless{}sup\textgreater{}\&sstarf;\&sstarf;\&sstarf;\textless{}/sup\textgreater{}p\textless{}0.01))}
+
+\DocumentationTok{\#\#\# this extra code from notes.append onwards fixes a minor issue of not including the number of stars at the end of the table in HTML output only}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{summary-1}{%
+\section{6. Summary}\label{summary-1}}
+
+We have now progressed away from simple `one-way' designs into more
+complex multiple predictor statistics that include interactions as well
+as main effects.
+
+Interactions are assessed relative to a null hypothesis of an additive
+effect only.
+
+Interactions can be \textbf{positive} (when there effects are greater
+than the additive expectation) or \textbf{negative} (if they are less
+than the additive expectation).
+
+When we treated this as four separate treatments, there was no way to
+establish the effect of light, or to separate out the effect size of
+interactions between treatments.
+
+However, a proper factorial analysis which includes an interaction term
+allows us to show that the combination of light and fertilise is greater
+than their additive expectation.
+
+This suggests that biomass production may be limited by different
+factors in the under-storey and upper canopy of the plants. For example
+with the addition of fertiliser competition for light may be more
+intense, or more light limited. Adding light to these plants increases
+biomass substantially.
+
+\hypertarget{test-yourself}{%
+\subsection{6.1 Test yourself}\label{test-yourself}}
+
+You should complete these and check the solutions below!
+
+A researcher is investigating the impacts of stream water temperature
+(∘C), volumetric flow rate (cubic feet per second, cfs), and substrate
+composition (gravel, sand, or mud) on chlorophyll concentration (μg/L).
+After thoroughly exploring and thinking really hard about the data, they
+determine that multiple linear regression \emph{without} an interaction
+is an appropriate approach to explore relationships between variables.
+
+Performing multiple linear regression in R, they find the following
+model:
+
+\[chlorophyll = 19.2 + 1.3*(temperature) - 0.04*(flow_rate) - 8.6*(gravel) - 5.1*(sand)\]
+
+\textbf{A. What are the predictor and outcome variables, and what type
+of variable is each?}
+
+\begin{itemize}
+\item
+  Dependent variable: chlorophyll concentration (a continuous variable)
+\item
+  Predictor variable: water temperature (a continuous variable)
+\item
+  Predictor variable: flow rate (a continuous variable)
+\item
+  Predictor variable: stream substrate (a categorical variable with
+  three levels: mud, gravel, or sand
+\end{itemize}
+
+\textbf{B. What is the reference level for stream substrate
+composition?}
+
+The reference level for stream substrate is mud (the level that does not
+appear explicitly in the regression model)
+
+\textbf{C. Interpret each of the model coefficients}
+
+\begin{itemize}
+\item
+  Write a sentence describing what the 1.3 coefficient for temperature
+  means
+\item
+  Write a sentence describing what the -0.04 coefficient for flow\_rate
+  means
+\item
+  Write a sentence describing what the -8.6 coefficient for gravel means
+\item
+  Write a sentence describing what the -5.1 coefficient for sand means
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  Write a sentence describing what the 1.3 coefficient for temperature
+  means:
+\end{itemize}
+
+\textbf{For each 1 ∘C increase in water temperature, we expect
+chlorophyll concentration to increase by 1.3 μg/L, on average.}
+
+\begin{itemize}
+\tightlist
+\item
+  Write a sentence describing what the -0.04 coefficient for flow\_rate
+  means:
+\end{itemize}
+
+\textbf{For each 1 cfs increase in flow rate, we expect chlorophyll
+concentration to decrease by 0.04 μg/L, on average.}
+
+\begin{itemize}
+\tightlist
+\item
+  Write a sentence describing what the -8.6 coefficient for gravel
+  means:
+\end{itemize}
+
+\textbf{If stream conditions are otherwise the same, we expect
+chlorophyll concentration in a stream with gravel substrate to be 8.6
+μg/L less than in a stream with mud substrate, on average.}
+
+\begin{itemize}
+\tightlist
+\item
+  Write a sentence describing what the -5.1 coefficient for sand means:
+\end{itemize}
+
+\textbf{If stream conditions are otherwise the same, we expect
+chlorophyll concentration in a stream with sand substrate to be 5.1 μg/L
+less than in a stream with mud substrate, on average.}
+
+\textbf{D. Make chlorophyll concentration predictions for streams with
+the following conditions:}
+
+What is the predicted chlorophyll concentration for a stream with a flow
+rate of 184 cfs, temperature of 18.4 ∘C, with gravel substrate?
+
+What is the predicted chlorophyll concentration for a stream with a flow
+rate of 386 cfs, temperature of 16.1 ∘C, with mud substrate?
+
+What is the predicted chlorophyll concentration for a stream with a flow
+rate of 184 cfs, temperature of 18.4 ∘C, with gravel substrate?
+
+\textbf{chlorophyll = 19.2 + 1.3\emph{(18.4) - 0.04}(184) - 8.6\emph{(1)
+- 5.1}(0) = 27.2 μg/L}
+
+What is the predicted chlorophyll concentration for a stream with a flow
+rate of 386 cfs, temperature of 16.1 ∘C, with mud substrate?
+
+\textbf{chlorophyll = 19.2 + 1.3\emph{(16.1) - 0.04}(386) - 8.6\emph{(0)
+- 5.1}(0) = 24.7 μg/L}
+
+\hypertarget{checklist}{%
+\subsection{6.2 Checklist}\label{checklist}}
+
+\begin{itemize}
+\item
+  Make sure you think about your data \emph{before} you start making
+  models
+\item
+  Make sure you visualise your data \emph{before} you start making
+  models
+\item
+  Make sure you have a clear hypothesis \emph{before} you start making
+  models
+\item
+  You can \emph{over-fit} your model and this is generally better than
+  \emph{under-fitting}
+\item
+  But if a term can be removed without significantly affecting the fit
+  of the model, then you can do this - and write this up. Then move on
+  to testing main effects.
+\end{itemize}
+
+\end{document}

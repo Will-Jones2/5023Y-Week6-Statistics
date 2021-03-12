@@ -1,15 +1,7 @@
 ---
 title: 'Unit E-wk6 Statistics: Interactions'
-author: 'Lecturer: Philip Leftwich, Module: UEA BIO 5023Y'
+author: "Will Jones"
 output:
-  html_document:
-    code_folding: hide
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    highlight: pygments
-    css: css/lab.css
-link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -48,7 +40,7 @@ Experiments with designs that feature combinations of different treatments are c
 Experiments that have all possible combinations are "full factorial" analyses. 
 
 ```{r, message=FALSE}
-biomass <- read_csv("Data/biomass.csv")
+biomass <- read_csv("data/biomass.csv")
 
 ```
 
